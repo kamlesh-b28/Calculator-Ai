@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b24">
+  <title>Calculator AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="logo">∑</div>
+    <h2>Calculator <span>AI</span></h2>
+    <div class="badge">SMART AI</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="tag">✦ YOUR SMART MATH ASSISTANT</p>
+      <h1>Calculate fast.<br><span>Understand every step.</span></h1>
+      <p class="muted">Your everyday calculator, made smarter.</p>
+    </section>
+
+    <section class="panel">
+      <h3>Quick Calculator</h3>
+      <div class="display">
+        <div id="expression">Ready to calculate</div>
+        <div id="result">0</div>
+      </div>
+
+      <div class="keys">
+        <button class="clear" onclick="clearCalc()">AC</button>
+        <button onclick="add('(')">(</button>
+        <button onclick="add(')')">)</button>
+        <button onclick="backspace()">⌫</button>
+
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+        <button class="op" onclick="add('/')">÷</button>
+
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+        <button class="op" onclick="add('*')">×</button>
+
+        <button onclick="add('1')">1</button>
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+        <button class="op" onclick="add('-')">−</button>
+
+        <button onclick="add('0')">0</button>
+        <button onclick="add('.')">.</button>
+        <button class="op" onclick="add('+')">+</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+        <button class="wide" onclick="square()">x²</button>
+        <button class="wide" onclick="squareRoot()">√x</button>
+      </div>
+    </section>
+
+    <section class="panel ai-panel">
+      <h3>✦ Ask Calculator AI</h3>
+      <p class="muted">Ask a maths question for a step-by-step explanation.</p>
+
+      <textarea id="question"
+        placeholder="Example: What is 18% of 850?"
+        maxlength="1200"></textarea>
+
+      <div class="examples">
+        <button onclick="example('What is 18% of 850?')">18% of 850</button>
+        <button onclick="example('Solve 2x + 7 = 31 step by step')">Solve for x</button>
+      </div>
+
+      <button id="askBtn" class="ask" onclick="askAI()">
+        ✦ Explain with AI
+      </button>
+
+      <p id="status" class="muted"></p>
+      <div id="answer" class="answer">Your AI answer will appear here.</div>
+    </section>
+  </main>
+
+  <footer>Calculator AI · Built for smarter learning</footer>
+  <script src="script.js"></script>
+</body>
+</html>
